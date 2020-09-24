@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Colour Game</title>
+    <link rel="stylesheet" type="text/css" href="game.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 id="header">
+      Guess the Colour Game <br />
+      <span id="colorDisplay"></span>
+    </h1>
+    <div id="buttons">
+      <button id="easy" class="selected">Easy</button>
+      <button id="hard">Hard</button>
+    </div>
+    <div id="mainbody">
+      <div class="sideDisplay">
+        <div class="countdown">05:00</div>
+        <span class="message"></span>
+      </div>
+
+      <div id="container">
+        <button id="start">Go!</button>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+        <div class="square hidden"></div>
+      </div>
+      <div class="sideDisplay">
+        <div class="countdown">05:00</div>
+        <span class="message"></span>
+      </div>
+    </div>
+
+    <div id="messageContainer">
+      <button id="replay" class="hidden">New Colours</button>
+      <button id="info">?</button>
+    </div>
+
+    <div id="infoModal" class="modal">
+      <div class="infoContent">
+        <span class="close">&times;</span>
+        <h2>How To Play</h2>
+        <p>
+          The values at the top of the screen describe a colour using the RGB
+          colour model - the amount of Red, Green and Blue respectively in the
+          target colour. 0 is the lowest value and 255 the highest. For example,
+          RGB(255,0,0) describes a perfect red, RGB(0,255,0) a perfect green,
+          and RGB(255,0,255) is a mix of a lot of red and a lot of blue, so you
+          would expect the colour to be purple.
+        </p>
+        <p>
+          In easy Mode, you have 5 seconds to guess the colour once you press
+          'Go!'. In hard mode, you only have 3.
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
